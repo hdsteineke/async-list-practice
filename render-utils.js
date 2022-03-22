@@ -8,11 +8,11 @@ export function renderBird(someBird) {
 
     birdEl.classList.add('bird');
 
-    nameEl.textContent = someBird.species;
+    nameEl.textContent = 'Name: ' + someBird.species;
     imgEl.src = someBird.image;
-    colorEl.textContent = someBird.color;
-    habitatEl.textContent = someBird.habitat;
-    wingspanEl.textContent = someBird.wingspan;
+    colorEl.textContent = 'Color: ' + someBird.color;
+    habitatEl.textContent = 'Habitat: ' + someBird.habitat;
+    wingspanEl.textContent = 'Wingspan(in.): ' + someBird.wingspan;
 
 
     birdEl.append(nameEl, imgEl, colorEl, habitatEl, wingspanEl);
