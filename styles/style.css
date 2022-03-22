@@ -129,3 +129,16 @@ footer {
     padding: none;
     margin: none;
 }
+
+.book {
+    box-shadow: var(--shadow);
+    padding: 20px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book p {
+    padding: none;
+    margin: none;
+}

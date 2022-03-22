@@ -43,7 +43,7 @@ export function renderPlant(somePlant) {
 
 export function renderSnack(someSnack) {
     const snackEl = document.createElement('div');
-    const nameEl = document.createElement('p');
+    const nameEl = document.createElement('h3');
     const colorEl = document.createElement('p');
     const priceEl = document.createElement('p');
     const veganEl = document.createElement('p');
@@ -58,4 +58,23 @@ export function renderSnack(someSnack) {
     snackEl.append(nameEl, colorEl, priceEl, veganEl);
 
     return snackEl;
+}
+
+export function renderBook(someBook) {
+    const bookEl = document.createElement('div');
+    const titleEl = document.createElement('h3');
+    const genreEl = document.createElement('p');
+    const chapterEl = document.createElement('p');
+    const copiesEl = document.createElement('p');
+
+    bookEl.classList.add('book');
+
+    titleEl.textContent = 'Title: ' + someBook.title;
+    genreEl.textContent = 'Genre: ' + someBook.genre;
+    chapterEl.textContent = 'Chapterbook:' + someBook.is_chapterbook;
+    copiesEl.textContent = 'Copies sold: ' + someBook.copies_sold;
+
+    bookEl.append(titleEl, genreEl, chapterEl, copiesEl);
+
+    return bookEl;
 }

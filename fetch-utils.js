@@ -27,3 +27,11 @@ export async function getSnacks() {
 
     return response.body;
 }
+
+export async function getBooks() {
+    const response = await client
+        .from('Books')
+        .select('*');
+
+    return response.body;
+}

@@ -8,6 +8,10 @@ import { getPlants } from './fetch-utils.js';
 import { renderSnack } from './render-utils.js';
 import { getSnacks } from './fetch-utils.js';
 
+import { renderBook } from './render-utils.js';
+import { getBooks } from './fetch-utils.js';
+
+
 // let state
 
 // set event listeners 
@@ -21,6 +25,7 @@ window.addEventListener('load', async () => {
     fetchAndDisplayBirds();
     fetchAndDisplayPlants();
     fetchAndDisplaySnacks();
+    fetchAndDisplayBooks();
   
 });
 
@@ -57,5 +62,17 @@ async function fetchAndDisplaySnacks() {
         const snackEl = renderSnack(snack);
 
         snackContainerEl.append(snackEl);
+    }
+}
+
+const bookContainerEl = document.querySelector('#book-container');
+
+async function fetchAndDisplayBooks() {
+    const books = await getBooks();
+
+    for (let book of books) {
+      const bookEl = renderBook(book);
+
+      bookContainerEl.append(bookEl);
     }
 }
