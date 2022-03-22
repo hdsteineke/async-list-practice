@@ -9,7 +9,7 @@ export function renderBird(someBird) {
     birdEl.classList.add('bird');
 
     nameEl.textContent = someBird.species;
-    imgEl.src = `./assets/${someBird}-bird.png`;
+    imgEl.src = someBird.image;
     colorEl.textContent = someBird.color;
     habitatEl.textContent = someBird.habitat;
     wingspanEl.textContent = someBird.wingspan;
