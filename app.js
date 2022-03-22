@@ -11,13 +11,18 @@ import { getBirds } from './fetch-utils.js';
 const birdContainerEl = document.querySelector('#bird-container');
 
 window.addEventListener('load', async () => {
+    fetchAndDisplayBirds();
+  
+});
+
+async function fetchAndDisplayBirds() {
+
     const birds = await getBirds();
 
     for (let bird of birds) {
         const birdEl = renderBird(bird);
 
         birdContainerEl.append(birdEl);
+
     }
-
-});
-
+}
