@@ -40,3 +40,22 @@ export function renderPlant(somePlant) {
     return plantEl;
 
 }
+
+export function renderSnack(someSnack) {
+    const snackEl = document.createElement('div');
+    const nameEl = document.createElement('p');
+    const colorEl = document.createElement('p');
+    const priceEl = document.createElement('p');
+    const veganEl = document.createElement('p');
+
+    snackEl.classList.add('snack');
+
+    nameEl.textContent = 'Name: ' + someSnack.name;
+    colorEl.textContent = 'Color: ' + someSnack.color;
+    priceEl.textContent = 'Price: $' + someSnack.price;
+    veganEl.textContent = 'Vegan: ' + someSnack.is_vegan;
+
+    snackEl.append(nameEl, colorEl, priceEl, veganEl);
+
+    return snackEl;
+}

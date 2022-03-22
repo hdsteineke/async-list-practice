@@ -19,3 +19,11 @@ export async function getPlants() {
 
     return response.body;
 }
+
+export async function getSnacks() {
+    const response = await client
+        .from('Snacks')
+        .select('*');
+
+    return response.body;
+}

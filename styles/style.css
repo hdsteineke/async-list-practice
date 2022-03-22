@@ -117,3 +117,15 @@ footer {
     margin: none;
 }
 
+.snack {
+    box-shadow: var(--shadow);
+    padding: 20px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.snack p {
+    padding: none;
+    margin: none;
+}
