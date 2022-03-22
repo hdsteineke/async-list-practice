@@ -1,4 +1,4 @@
-export function renderBird(somePlant) {
+export function renderBird(someBird) {
     const birdEl = document.createElement('div');
     const nameEl = document.createElement('h3');
     const imgEl = document.createElement('img');

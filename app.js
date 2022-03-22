@@ -1,6 +1,9 @@
 // import functions and grab DOM elements
 import { renderBird } from './render-utils.js';
 import { getBirds } from './fetch-utils.js';
+
+import { renderPlant } from './render-utils.js';
+import { getPlants } from './fetch-utils.js';
 // let state
 
 // set event listeners 
@@ -12,6 +15,7 @@ const birdContainerEl = document.querySelector('#bird-container');
 
 window.addEventListener('load', async () => {
     fetchAndDisplayBirds();
+    fetchAndDisplayPlants();
   
 });
 
@@ -24,5 +28,17 @@ async function fetchAndDisplayBirds() {
 
         birdContainerEl.append(birdEl);
 
+    }
+}
+
+const plantContainerEl = document.querySelector('#plant-container');
+
+async function fetchAndDisplayPlants() {
+    const plants = await getPlants();
+
+    for (let plant of plants) {
+        const plantEl = renderPlant(plant);
+
+        plantContainerEl.append(plantEl);
     }
 }

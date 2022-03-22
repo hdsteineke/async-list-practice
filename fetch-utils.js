@@ -12,3 +12,10 @@ export async function getBirds() {
 
 }
 
+export async function getPlants() {
+    const response = await client
+        .from('Plants')
+        .select('*');
+
+    return response.body;
+}
