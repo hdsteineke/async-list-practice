@@ -19,3 +19,11 @@ export function renderBird(someBird) {
 
     return birdEl;
 }
+
+
+export function renderPlant(somePlant) {
+    const plantEl = document.createElement('div');
+    const nameEl = document.createElement('h3');
+    const imgEl = document.createElement('img');
+    const nativeEl = document.createElement('p');
+    const seasonEl = document.createElement('p');
