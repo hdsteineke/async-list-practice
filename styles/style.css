@@ -33,7 +33,7 @@ body {
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
@@ -55,7 +55,7 @@ section {
 
 header {
     display: flex;
-    justify-content: flex-end; */
+    justify-content: flex-end; 
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
@@ -90,66 +90,50 @@ footer {
     box-shadow: var(--shadow);
 }
     
-.main-section {
+.contain-all {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 
 }
 
 
 .bird {
-    display: flex;
-    flex-direction: row;
     box-shadow: var(--shadow);
-    height: 200px;
-    width: 600px;
+    padding: 20px;
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     
 }
 
-.bird p {
-    padding: none;
-    margin: none;
+.bird img {
+    width: 200px;
+    justify-content: center;
 }
 
 
 .plant {
     box-shadow: var(--shadow);
-    padding: 20px;
-    height: 200px;
-    width: 600px;
-    display: flex;
-    flex-direction: row;
-}
-
-
-.plant p {
-    padding: none;
-    margin: none;
-}
-
-
-.snack {
-    box-shadow: var(--shadow);
-    padding: 20px;
-    width: 600px;
     display: flex;
     flex-direction: column;
 }
 
-.snack p {
-    padding: none;
-    margin: none;
+.plant img {
+    width: 300px;
 }
+
+.snack {
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
 
 .book {
     box-shadow: var(--shadow);
-    padding: 20px;
-    width: 600px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-.book p {
-    padding: none;
-    margin: none;
-}
