@@ -26,7 +26,6 @@ window.addEventListener('load', async () => {
     fetchAndDisplayPlants();
     fetchAndDisplaySnacks();
     fetchAndDisplayBooks();
-  
 });
 
 async function fetchAndDisplayBirds() {
@@ -71,8 +70,8 @@ async function fetchAndDisplayBooks() {
     const books = await getBooks();
 
     for (let book of books) {
-      const bookEl = renderBook(book);
+        const bookEl = renderBook(book);
 
-      bookContainerEl.append(bookEl);
+        bookContainerEl.append(bookEl);
     }
 }
