@@ -55,7 +55,7 @@ section {
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; 
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
@@ -89,3 +89,51 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+    
+.contain-all {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+
+.bird {
+    box-shadow: var(--shadow);
+    padding: 20px;
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.bird img {
+    width: 200px;
+    justify-content: center;
+}
+
+
+.plant {
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.plant img {
+    width: 300px;
+}
+
+.snack {
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.book {
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
